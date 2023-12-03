@@ -1,0 +1,193 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivItemImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Item Name"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvItemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Item Description"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feedbackLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Submit" />
+
+        <LinearLayout
+            android:id="@+id/feedbackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemRating"
+            android:orientation="vertical">
+
+            <!-- Question 1: How do you know? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="How do you know?"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupHowDoYouKnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMedias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medias" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFromSomeone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From someone" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Internet" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOthers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others" />
+            </RadioGroup>
+
+            <!-- Question 2: How long do you know? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="How long do you know?"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupHowLongDoYouKnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton0To1Year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0-1 year" />
+
+                <RadioButton
+                    android:id="@+id/radioButton1To5Years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-5 years" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonMoreThan5Years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More than 5 years" />
+            </RadioGroup>
+
+            <!-- Question 3: Have you ever purchased? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Have you ever purchased?"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupEverPurchased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+
+            <!-- Feedback EditText -->
+            <EditText
+                android:id="@+id/editTextFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/border_radius"
+                android:hint="Type your feedback here"
+                android:inputType="textMultiLine"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvItemRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Item Rating: 0.0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</ScrollView>
