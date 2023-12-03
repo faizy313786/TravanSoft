@@ -1,2 +1,9 @@
 # TravanSoft
-Machine Test
+
+Screens 
+Splash
+Login
+Register
+MainDash
+ratingSCreen
+
